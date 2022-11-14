@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MeliChallenge</string>
+    <string name="search_into_mercado_libre">Buscar en Mercado Libre</string>
+    <string name="we_did_not_find_publications">No encontramos publicaciones</string>
+    <string name="description_not_find_publications">Revisa que la palabra esté bien escrita. También puedes probar con menos términos o más generales.</string>
+    <string name="plus_results">+ 2000 resultados</string>
+    <string name="results">resultados</string>
+    <string name="there_is_no_internet">!Parece que no hay internet!</string>
+    <string name="description_there_is_no_internet">Revisa tu conexión para seguir navegado.</string>
+    <string name="retry">Reintentar</string>
+    <string name="conection_error">Ocurrio un error en la conexión de red</string>
+    <string name="categories">Categorias</string>
+    <string name="eDescription">Descripción</string>
+    <string name="author">Autor: Edwin Fernando Muñoz</string>
+    <string name="sorry">!Lo sentimos!</string>
+    <string name="api_response_failure">Tuvimos una falla en nuestro servicio, por favor vuelve a la pantalla anterior e intente nuevamente.</string>
+    <string name="back">Volver</string>
+</resources>
