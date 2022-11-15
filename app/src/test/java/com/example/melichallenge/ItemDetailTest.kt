@@ -34,7 +34,7 @@ class ItemsDetailTest {
         mockWebServer.enqueueResponse("item_detail_successful.json")
 
         runBlocking {
-            val itemDetail = itemsDetailRepository.getDetails("MLA1231759135")
+            val itemDetail = itemsDetailRepository.getItemDetailsApi("MLA1231759135")
             Assert.assertEquals("MLA1231759135", itemDetail.id)
         }
     }
@@ -44,7 +44,7 @@ class ItemsDetailTest {
         mockWebServer.enqueueResponse("item_detail_failure.json")
         assertThrows(Exception::class.java){
             runBlocking {
-                itemsDetailRepository.getDetails("MLA123175913")
+                itemsDetailRepository.getItemDetailsApi("MLA123175913")
             }
         }
     }
@@ -54,7 +54,7 @@ class ItemsDetailTest {
         mockWebServer.enqueueResponse("item_description_successful.json")
 
         runBlocking {
-            val itemDescription = itemsDetailRepository.getDescription("MLA1231759135")
+            val itemDescription = itemsDetailRepository.getItemDescriptionApi("MLA1231759135")
             Assert.assertEquals("", itemDescription.text)
         }
     }
@@ -64,7 +64,7 @@ class ItemsDetailTest {
         mockWebServer.enqueueResponse("item_description_failure.json")
         assertThrows(Exception::class.java){
             runBlocking {
-                itemsDetailRepository.getDetails("MLA123175913")
+                itemsDetailRepository.getItemDescriptionApi("MLA123175913")
             }
         }
     }

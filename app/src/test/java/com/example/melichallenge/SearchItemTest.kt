@@ -33,7 +33,7 @@ class SearchItemsTest {
         mockWebServer.enqueueResponse("search_item_successful.json")
 
         runBlocking {
-            val itemSearch = searchItemsRepository.getItemsSearched("camara")
+            val itemSearch = searchItemsRepository.getItemsSearchedApi("camara")
             Assert.assertEquals(50, itemSearch.size)
         }
     }
@@ -43,7 +43,7 @@ class SearchItemsTest {
         mockWebServer.enqueueResponse("search_item_empty.json")
 
         runBlocking {
-            val itemSearch = searchItemsRepository.getItemsSearched("fasdfasf")
+            val itemSearch = searchItemsRepository.getItemsSearchedApi("fasdfasf")
             Assert.assertEquals(0, itemSearch.size)
         }
     }

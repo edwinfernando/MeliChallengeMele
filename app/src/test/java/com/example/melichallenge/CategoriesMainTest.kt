@@ -2,7 +2,6 @@ package com.example.melichallenge
 
 import com.example.melichallenge.provider.MeliProvider
 import com.example.melichallenge.repository.CategoriesMainRepositoryImp
-import com.example.melichallenge.repository.SearchItemsRepositoryImp
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.MockResponse
@@ -10,7 +9,6 @@ import okhttp3.mockwebserver.MockWebServer
 import okio.buffer
 import okio.source
 import org.junit.After
-import org.junit.Assert
 import org.junit.Test
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -38,7 +36,7 @@ class CategoriesMainTest {
         mockWebServer.enqueueResponse("categories_main_successful.json")
 
         runBlocking {
-            categoriesMainRepository.getCategories()
+            categoriesMainRepository.getCategoriesApi()
         }
     }
 }
